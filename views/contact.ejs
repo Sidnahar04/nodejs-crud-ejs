@@ -16,8 +16,36 @@
                 <% }); %>
             </ul>
         <% } %>
-
-        <form action="/add" method="post" class="contact-form">
+        <% if(formData.id){ %>
+            <form action="/edit/<%= formData.id %>" method="post" class="contact-form">
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" id="firstname" value="<%= formData.FirstName || '' %>" required><br>
+            
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="lastname" id="lastname" value="<%= formData.LastName || '' %>" required><br>
+            
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="<%= formData.Email || '' %>" required><br>
+            
+                <label for="PhoneNumber">Phone Number:</label>
+                <input type="tel" name="PhoneNumber" id="phone" value="<%= formData.PhoneNumber || '' %>" required><br>
+            
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city" value="<%= formData.City || '' %>"><br>
+            
+                <label for="province">Province:</label>
+                <input type="text" name="province" id="province" value="<%= formData.Province || '' %>"><br>
+            
+                <label for="postalcode">Postal Code:</label>
+                <input type="text" name="postalcode" id="postalcode" value="<%= formData.PostalCode || '' %>" required><br>
+            
+                <label for="feedbackmessage">Feedback Message:</label>
+                <textarea name="feedbackmessage" id="feedbackmessage" rows="4"><%= formData.FeedbackMessage || '' %></textarea><br>
+            
+                <button type="submit">Submit</button>
+            </form>
+            <% }  else {%>
+            <form action="/add" method="post" class="contact-form">
             <label for="firstname">First Name:</label>
             <input type="text" name="firstname" id="firstname" value="<%= formData.firstname || '' %>" required><br>
         
@@ -28,7 +56,7 @@
             <input type="email" name="email" id="email" value="<%= formData.email || '' %>" required><br>
         
             <label for="phone">Phone Number:</label>
-            <input type="tel" name="phone" id="phone" value="<%= formData.phone || '' %>" required><br>
+            <input type="tel" name="phone" id="phone" value="<%= formData.PhoneNumber || '' %>" required><br>
         
             <label for="city">City:</label>
             <input type="text" name="city" id="city" value="<%= formData.city || '' %>"><br>
@@ -43,7 +71,8 @@
             <textarea name="feedbackmessage" id="feedbackmessage" rows="4"><%= formData.feedbackmessage || '' %></textarea><br>
         
             <button type="submit">Submit</button>
-        </form>
+            </form>
+            <% } %>
     </main>
 
     <%- include('partials/footer') %>

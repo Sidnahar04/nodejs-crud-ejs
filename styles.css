@@ -130,6 +130,63 @@ h1 {
   color: #333;
 }
 
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-card {
+  width: 250px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact-card .card-content p {
+  font-size: 1em;
+  margin: 8px 0;
+  color: #333;
+}
+
+.contact-card .card-content strong {
+  color: #4CAF50;
+}
+
+.update-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 13px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.update-button:hover {
+  background-color: #45a049;
+}
+
 .thank-you-footer {
   background-color: #444;
   color: #fff;

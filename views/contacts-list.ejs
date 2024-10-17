@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <%- include('partials/header', { title: 'Contacts' }) %>
+        <h1>List of All Contacts</h1>
+        <div class="contact-list">
+            <% allContacts.forEach(contact => { %>
+                <div class="contact-card">
+                    <div class="card-content">
+                        <p><strong>First Name:</strong> <%= contact.FirstName %></p>
+                        <p><strong>Last Name:</strong> <%= contact.LastName %></p>
+                        <p><strong>Email:</strong> <%= contact.Email %></p>
+                        <p><strong>FeedbackMessage:</strong> <%= contact.FeedbackMessage %></p>
+
+                        <a href="/edit/<%= contact.id %>" class="update-button">Update</a>
+                        <form action="/delete/<%= contact.id %>" method="post">
+                            <button class="delete-button">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        <%- include('partials/footer') %>
+    </body>    
+</html>
