@@ -5,6 +5,8 @@ const path = require('path');
 const { body, validationResult } = require('express-validator');
 const app = express();
 const port = 3000;
+const randomGreeting = require('./greeting');
+
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
@@ -18,13 +20,10 @@ db.connect((err) => {
     console.log('Database connected');
 });
 
-//endpoint for thank you file
-app.get('/thankyou', (req, res) => {
-    res.render("thankyou.ejs");
-});
 
 app.get('/', (req, res) => {
-    res.render("home");
+    const greeting = randomGreeting();
+    res.render("home",{greeting});
 });
 
 app.get('/contact', (req, res) => {
@@ -123,6 +122,10 @@ app.post('/delete/:id', (req, res) => {
             });
         }
     });
+});
+
+app.get('/thankyou', (req, res) => {
+    res.render("thankyou.ejs");
 });
 
 //endpoint for error pages
