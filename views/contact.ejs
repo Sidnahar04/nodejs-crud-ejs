@@ -1,0 +1,52 @@
+<!-- views/contact.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <%- include('partials/header', { title: 'Contact Us' }) %>
+
+    <main class="contact-form-container">
+        <h1>Contact Us</h1>
+
+        <!-- Display validation errors, if any -->
+        <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+            <ul class="error-messages">
+                <% errors.forEach(function(error) { %>
+                    <li><%= error.msg %></li>
+                <% }); %>
+            </ul>
+        <% } %>
+
+        <form action="/add" method="post" class="contact-form">
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstname" id="firstname" value="<%= formData.firstname || '' %>" required><br>
+        
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname" value="<%= formData.lastname || '' %>" required><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="<%= formData.email || '' %>" required><br>
+        
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="phone" value="<%= formData.phone || '' %>" required><br>
+        
+            <label for="city">City:</label>
+            <input type="text" name="city" id="city" value="<%= formData.city || '' %>"><br>
+        
+            <label for="province">Province:</label>
+            <input type="text" name="province" id="province" value="<%= formData.province || '' %>"><br>
+        
+            <label for="postalcode">Postal Code:</label>
+            <input type="text" name="postalcode" id="postalcode" value="<%= formData.postalcode || '' %>" required><br>
+        
+            <label for="feedbackmessage">Feedback Message:</label>
+            <textarea name="feedbackmessage" id="feedbackmessage" rows="4"><%= formData.feedbackmessage || '' %></textarea><br>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+
+</html>

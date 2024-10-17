@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #444;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 1em;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.hero {
+  background-color: #007bff;
+  color: #fff;
+  padding: 2em 0;
+  text-align: center;
+}
+.services {
+  padding: 2em;
+  text-align: center;
+}
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+.services li {
+  background-color: #fff;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.testimonials {
+  padding: 2em;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+blockquote {
+  font-style: italic;
+  color: #666;
+  margin: 1em auto;
+  max-width: 600px;
+}
+.contact-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #218838;
+}
+
+.thank-you-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-container h1 {
+  font-size: 2em;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.thank-you-container p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.thank-you-footer {
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  bottom: 0;
+  width: 100%;
+  bottom: 0 !important;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+}
+
+footer {
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  bottom: 0;
+  width: 100%;
+  bottom: 0 !important;
+}

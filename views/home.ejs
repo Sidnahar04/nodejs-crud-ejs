@@ -1,0 +1,47 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Home Page</title> -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <%- include('partials/header' , {title:'Home Page'}) %>
+        <section class="hero">
+            <h1>Welcome to Fitness Club</h1>
+            <p>Your journey to a healthier life starts here. Join us to achieve your fitness goals.</p>
+        </section>
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>
+                    <h3>Personal Training</h3>
+                    <p>Get one-on-one training sessions with our expert fitness coaches.</p>
+                </li>
+                <li>
+                    <h3>Group Classes</h3>
+                    <p>Join our high-energy group classes, including yoga, aerobics, and Zumba.</p>
+                </li>
+                <li>
+                    <h3>Nutrition Advice</h3>
+                    <p>Receive personalized diet plans from our certified nutritionists.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="testimonials">
+            <h2>What Our Members Say</h2>
+            <blockquote>
+                <p>"Fitness Club has transformed my life. The trainers are amazing, and the community is so supportive!"
+                </p>
+                <footer>- John Doe, Member</footer>
+            </blockquote>
+        </section>
+        <%- include('partials/footer') %>
+
+</body>
+
+</html>
